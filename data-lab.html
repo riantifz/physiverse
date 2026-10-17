@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Physiverse Data Lab — Dashboard Cuaca &amp; Iklim Interaktif | physiverse</title>
+<meta name="description" content="Dashboard interaktif berisi data cuaca nyata: analisis suhu, curah hujan, kelembapan, dan kecepatan angin untuk 16 kota di Indonesia, lengkap dengan cara membaca grafiknya dan unduhan CSV.">
+<link rel="canonical" href="https://physiverse.netlify.app/data-lab.html">
+<meta name="author" content="Kelompok physiverse — Pendidikan Fisika">
+<meta name="theme-color" content="#554348">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="physiverse">
+<meta property="og:title" content="Physiverse Data Lab — dashboard cuaca interaktif">
+<meta property="og:description" content="Olah data nyata: suhu, curah hujan, kelembapan, dan angin dari kota-kota di Indonesia.">
+<meta property="og:url" content="https://physiverse.netlify.app/data-lab.html">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" title="CC0 1.0 Universal (Public Domain Dedication)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Physiverse Data Lab",
+  "url": "https://physiverse.netlify.app/data-lab.html",
+  "inLanguage": "id",
+  "description": "Dashboard interaktif data cuaca nyata (suhu, curah hujan, kelembapan, kecepatan angin) untuk kota-kota di Indonesia.",
+  "isPartOf": { "@type": "WebSite", "name": "physiverse", "url": "https://physiverse.netlify.app/" }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+<header class="site-header">
+  <div class="announce">
+    <div class="wrap">
+      <span>Edisi baru: <b>Physiverse Data Lab</b> &amp; <b>Glosarium Fisika</b> sudah dibuka</span>
+      <span class="dot-sep" aria-hidden="true">&middot;</span>
+      <a href="data-lab.html">Coba Data Lab &rarr;</a>
+    </div>
+  </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="physiverse, ke beranda">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#554348"/>
+        <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+        <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+        <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+        <circle cx="33" cy="13" r="2.2" fill="#D4F5F5"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">physi<em>verse</em></span>
+        <span class="brand-tag">Fisika di Sekitar Kita</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Artikel <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="index.html#artikel">Semua artikel</a></li>
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone anti-bising</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Jelajah <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Tentang <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-accent btn-sm nav-cta" href="data-lab.html">Data Lab &rarr;</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu navigasi">
+        <span class="bars"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="article-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Beranda</a></li>
+        <li>Physiverse Data Lab</li>
+      </ol>
+      <span class="badge badge-cyan">Fitur interaktif</span>
+      <h1>Physiverse Data Lab</h1>
+      <p class="lede">Tempat pembaca menjelajahi data sains melalui grafik dan dashboard interaktif. Pilih kota, lihat bagaimana suhu, curah hujan, kelembapan, dan kecepatan angin bergerak sepanjang hari, lalu baca penjelasan fisikanya.</p>
+      <div class="article-meta">
+        <span>Data: <b>Open-Meteo</b> (CC BY 4.0)</span>
+        <span>16 kota di Indonesia</span>
+        <span>Unduh CSV</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div id="lab-app">
+
+        <div class="lab-bar">
+          <div class="lab-fields">
+            <label for="lab-city">Kota</label>
+            <select class="lab-select" id="lab-city" aria-label="Pilih kota"></select>
+            <button class="btn btn-ghost btn-sm" type="button" id="lab-refresh">Muat ulang data</button>
+          </div>
+          <div class="lab-fields">
+            <button class="btn btn-primary btn-sm" type="button" id="lab-csv">Unduh CSV 24 jam</button>
+          </div>
+        </div>
+        <p class="lab-status" id="lab-status" role="status" aria-live="polite">Menyiapkan data…</p>
+
+        <div class="metric-grid" id="lab-metrics"></div>
+
+        <div class="chart-grid">
+          <div class="chart-box">
+            <h3>Suhu udara — 24 jam</h3>
+            <p class="cb-sub">Titik penuh menandai suhu tertinggi dan terendah pada jendela waktu ini.</p>
+            <div id="chart-temp"></div>
+            <div class="chart-legend"><span><i style="background:#5c8189"></i>Suhu udara pada ketinggian 2 meter (°C)</span></div>
+          </div>
+
+          <div class="chart-box">
+            <h3>Curah hujan — per jam</h3>
+            <p class="cb-sub">Batang muncul hanya saat ada hujan; satuannya milimeter per jam (1 mm = 1 liter air per meter persegi).</p>
+            <div id="chart-rain"></div>
+            <div class="chart-legend"><span><i style="background:#5c8189"></i>Hujan terukur (mm/jam)</span></div>
+          </div>
+
+          <div class="chart-box">
+            <h3>Kelembapan relatif — 24 jam</h3>
+            <p class="cb-sub">Persentase uap air terhadap maksimum yang bisa ditampung udara pada suhu itu. 100% berarti udara jenuh.</p>
+            <div id="chart-hum"></div>
+            <div class="chart-legend"><span><i style="background:#554348"></i>Kelembapan relatif (%)</span></div>
+          </div>
+
+          <div class="chart-box">
+            <h3>Kecepatan angin — 24 jam</h3>
+            <p class="cb-sub">Diukur pada ketinggian 10 meter. Bandingkan puncaknya dengan tabel skala Beaufort di bawah.</p>
+            <div id="chart-wind"></div>
+            <div class="chart-legend"><span><i style="background:#93b7be"></i>Kecepatan angin (km/jam)</span></div>
+          </div>
+
+          <div class="chart-box" style="grid-column:1/-1">
+            <h3>Rentang suhu harian</h3>
+            <p class="cb-sub">Pita menunjukkan selisih suhu terendah dan tertinggi setiap hari. Pita tipis berarti siang-malam relatif sama; pita lebar berarti perbedaan besar.</p>
+            <div id="chart-daily"></div>
+            <div class="chart-legend">
+              <span><i style="background:#5c8189"></i>Suhu tertinggi</span>
+              <span><i style="background:#8c9a9e"></i>Suhu terendah</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="widget-readout" id="lab-readout" aria-live="polite"></div>
+
+        <div class="notice">
+          <b>Tentang datanya.</b> Angka di halaman ini datang langsung dari API publik <a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener">Open-Meteo</a> (tanpa kunci API, lisensi CC BY 4.0), yang mengolah model prakiraan cuaca global. Ini bukan pengukuran resmi BMKG: untuk keperluan penerbangan, pertanian, atau kebencanaan, gunakan data resmi <a href="https://www.bmkg.go.id/" target="_blank" rel="noopener">BMKG</a>. Bila perangkatmu sedang offline, halaman otomatis memakai snapshot data nyata yang tersimpan di situs, dan status di atas akan menyebutkannya.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-soft">
+    <div class="wrap-narrow prose-outer">
+      <div class="prose">
+        <p class="eyebrow">Fisika di balik angka</p>
+        <h2 id="fisika-suhu">Kenapa suhu, hujan, angin, dan lembapan itu fisika</h2>
+        <p>Data cuaca bukan sekadar angka di layar: setiap grafik di atas adalah hasil hukum-hukum fisika. Berikut cara membacanya.</p>
+
+        <h3 id="suhu">1. Suhu: ukuran energi gerak molekul</h3>
+        <p>Suhu udara adalah ukuran rata-rata energi kinetik molekul di sekitarmu. Makin cepat molekul bergerak, makin tinggi suhunya. Pada siang hari, permukaan bumi menyerap radiasi Matahari lalu memanaskannya dengan konduksi dan konveksi; karena itu suhu terendah biasanya muncul menjelang matahari terbit, bukan tepat tengah malam.</p>
+
+        <h3 id="embun">2. Kelembapan &amp; titik embun: seberapa "penuh" udara oleh uap air</h3>
+        <p>Udara hanya bisa menampung sejumlah uap air pada suhu tertentu. Kelembapan relatif 100% berarti udara sudah jenuh. Suhu saat udara menjadi jenuh disebut <b>titik embun</b> (dew point), dan bisa dihitung dengan rumus Magnus:</p>
+        <div class="formula">
+          <span class="lbl">Rumus Magnus (titik embun)</span>
+          a = ln(RH/100) + (b &middot; T) / (c + T)<br>
+          T<sub>d</sub> = (c &middot; a) / (b &minus; a)<br>
+          b = 17,62 &nbsp;&nbsp; c = 243,12 &deg;C
+        </div>
+        <p>Inilah alasan gelas es "berkeringat": permukaan gelas lebih dingin daripada titik embun udara di sekelilingnya, sehingga uap air mengembun di sana. Di halaman ini, titik embun dihitung lurus dari data suhu dan kelembapan yang sedang tampil.</p>
+
+        <h3 id="hujan">3. Curah hujan: pengembunan, kalor laten, dan konveksi</h3>
+        <p>Hujan dimulai ketika udara lembap naik, mengembang, dan mendingin sampai uap airnya mengembun menjadi titik-titik awan. Pengembunan melepaskan <b>kalor laten</b> yang membuat udara makin mengambang &mdash; itu sebabnya awan cumulonimbus bisa tumbuh menjulang dan menghasilkan hujan lebat. Satu milimeter curah hujan berarti satu liter air jatuh pada setiap meter persegi. Karena Indonesia berada di daerah tropis dengan uap air melimpah, puncak hujan biasanya sore hingga malam setelah pemanasan siang.</p>
+
+        <h3 id="angin">4. Angin: udara mengalir dari tekanan tinggi ke rendah</h3>
+        <p>Angin muncul karena perbedaan tekanan udara. Ledakan gaya per satuan luas ini membuat udara mengalir, dan makin besar beda tekanannya, makin kencang anginnya. Di pantai, perbedaan pemanasan darat dan laut menghasilkan angin darat-laut yang bisa kamu rasakan setiap hari. Kecepatan angin biasanya dinyatakan dalam skala Beaufort, dari 0 (tenang) sampai 12 (badai topan).</p>
+
+        <div class="table-scroll">
+          <table>
+            <caption>Skala Beaufort: kelas angin, kecepatan, dan tanda yang bisa kamu amati. Nilai kecepatan mengikuti tabel yang dipakai layanan cuaca nasional.</caption>
+            <thead>
+              <tr><th>Kelas</th><th>Nama</th><th>Kecepatan (km/jam)</th><th>Tanda di sekitar kita</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>0</td><td>Tenang</td><td>kurang dari 1</td><td>asap naik tegak lurus</td></tr>
+              <tr><td>1</td><td>Angin sepoi</td><td>1&ndash;5</td><td>arah angin terlihat dari asap</td></tr>
+              <tr><td>2</td><td>Sepoi lemah</td><td>6&ndash;11</td><td>daun bergerak pelan</td></tr>
+              <tr><td>3</td><td>Sepoi</td><td>12&ndash;19</td><td>daun dan ranting kecil bergoyang</td></tr>
+              <tr><td>4</td><td>Sedang</td><td>20&ndash;28</td><td>debu dan kertas beterbangan</td></tr>
+              <tr><td>5</td><td>Segar</td><td>29&ndash;38</td><td>pohon kecil bergoyang</td></tr>
+              <tr><td>6</td><td>Kuat</td><td>39&ndash;49</td><td>cabang besar bergoyang, payung sulit dipakai</td></tr>
+              <tr><td>7</td><td>Sangat kuat</td><td>50&ndash;61</td><td>seluruh pohon bergoyang</td></tr>
+              <tr><td>8</td><td>Badai</td><td>62&ndash;74</td><td>ranting patah</td></tr>
+              <tr><td>9</td><td>Badai kuat</td><td>75&ndash;88</td><td>genting dan perabot luar bisa tergeser</td></tr>
+              <tr><td>10</td><td>Badai hebat</td><td>89&ndash;102</td><td>pohon tercabut</td></tr>
+              <tr><td>11</td><td>Badai hebat sekali</td><td>103&ndash;117</td><td>kerusakan luas</td></tr>
+              <tr><td>12</td><td>Badai topan</td><td>118 ke atas</td><td>kerusakan sangat luas</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout fun">
+          <div class="callout-title"><span class="ico">💡</span> Cara memakai Data Lab untuk tugas sekolah</div>
+          <ol>
+            <li>Pilih dua kota yang berbeda lintangnya (misalnya Banda Aceh dan Kupang), lalu bandingkan grafik suhunya.</li>
+            <li>Catat puncak curah hujan masing-masing kota dan jamnya. Apakah keduanya terjadi sore hari?</li>
+            <li>Unduh CSV, hitung rata-rata suhu 24 jam, lalu bandingkan dengan angka di kartu "Suhu udara sekarang".</li>
+            <li>Hubungkan temuanmu dengan penjelasan fisika di halaman ini.</li>
+          </ol>
+        </div>
+
+        <h2 id="faq">Pertanyaan yang sering muncul</h2>
+        <div class="accordion">
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="true" aria-controls="lab-f1">Apakah ini data resmi BMKG?<span class="sign">&minus;</span></button>
+            <div class="acc-panel is-open" id="lab-f1">
+              <p>Tidak. Data di sini berasal dari API publik Open-Meteo yang mengolah model prakiraan cuaca global. Angkanya sangat berguna untuk belajar membaca data dan membandingkan kota, tetapi bukan pengukuran stasiun resmi. Untuk keputusan penting (penerbangan, pertanian, kebencanaan), rujuk data BMKG di bmkg.go.id.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="lab-f2">Kenapa suhu yang tampil tidak sama dengan yang kurasakan?<span class="sign">+</span></button>
+            <div class="acc-panel" id="lab-f2">
+              <p>Data suhu mengukur suhu udara pada ketinggian dua meter di tempat teduh dan berangin. Tubuhmu merasakan tambahan faktor: kelembapan (keringat sulit menguap), radiasi matahari langsung, dan kecepatan angin. Karena itu lahirlah istilah "suhu terasa" yang menggabungkan suhu, kelembapan, dan angin.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="lab-f3">Bagaimana halaman ini mengambil datanya?<span class="sign">+</span></button>
+            <div class="acc-panel" id="lab-f3">
+              <p>Halaman mengirim permintaan ke API Open-Meteo begitu kamu memilih kota, lalu menggambar grafiknya sendiri sebagai SVG. Tidak ada pustaka grafik pihak ketiga. Bila jaringan bermasalah, halaman memakai berkas cadangan berisi snapshot data nyata yang kami simpan saat membangun situs &mdash; dan status di atas halaman akan memberi tahu bahwa yang tampil adalah data cadangan.</p>
+            </div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-btn" aria-expanded="false" aria-controls="lab-f4">Apa arti satuan mm dan hPa?<span class="sign">+</span></button>
+            <div class="acc-panel" id="lab-f4">
+              <p>Milimeter (mm) pada curah hujan berarti tinggi air yang akan menggenang bila hujan tidak meresap atau mengalir: 1 mm sama dengan 1 liter per meter persegi. Hektopascal (hPa) adalah satuan tekanan udara; 1 hPa = 100 pascal = 100 newton per meter persegi. Tekanan permukaan laut biasanya berkisar 1.000&ndash;1.020 hPa di sekitar Indonesia.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 id="sumber">Sumber</h2>
+        <ol class="ref-list">
+          <li><span class="ref-title">Open-Meteo. <i>Free Weather Forecast API</i>.</span> <a href="https://open-meteo.com/en/docs" target="_blank" rel="noopener">open-meteo.com/en/docs</a><span class="ref-meta">Sumber data suhu, hujan, kelembapan, dan angin. Lisensi data CC BY 4.0.</span></li>
+          <li><span class="ref-title">National Weather Service (NOAA). <i>Beaufort Wind Scale</i>.</span> <a href="https://www.weather.gov/mfl/beaufort" target="_blank" rel="noopener">weather.gov/mfl/beaufort</a><span class="ref-meta">Rujukan tabel kelas angin yang dipakai di halaman ini.</span></li>
+          <li><span class="ref-title">World Meteorological Organization. <i>Beaufort scale</i>.</span> <a href="https://wmo.int/" target="_blank" rel="noopener">wmo.int</a><span class="ref-meta">Rujukan tambahan untuk skala angin (lihat juga tabel NOAA di atas).</span></li>
+          <li><span class="ref-title">Alduchov, O. A. &amp; Eskridge, R. E. (1996). <i>Improved Magnus Form Approximation of Saturation Vapor Pressure</i>. Journal of Applied Meteorology, 35(4), 601&ndash;609.</span> <a href="https://doi.org/10.1175/1520-0450(1996)035%3C0601:IMFAOS%3E2.0.CO;2" target="_blank" rel="noopener">doi:10.1175/1520-0450(1996)035&lt;0601:IMFAOS&gt;2.0.CO;2</a><span class="ref-meta">Rujukan koefisien 17,62 dan 243,12 °C pada rumus titik embun.</span></li>
+          <li><span class="ref-title">Badan Meteorologi, Klimatologi, dan Geofisika (BMKG).</span> <a href="https://www.bmkg.go.id/" target="_blank" rel="noopener">bmkg.go.id</a><span class="ref-meta">Lembaga resmi cuaca Indonesia.</span></li>
+        </ol>
+        <p class="widget-note">Catatan kejujuran: semua grafik, perhitungan titik embun, tekanan uap, dan kelas Beaufort di halaman ini dihitung otomatis di peramban dari data mentah &mdash; tidak ada angka yang kami ketik manual.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#3a2d31"/>
+            <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+            <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+            <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+          </svg>
+          <span class="brand-name">physi<em>verse</em></span>
+        </div>
+        <p style="font-size:.9rem;max-width:44ch">Sains populer tentang fisika di sekitar kita. Understanding the Science Behind Everyday Life.</p>
+        <p class="footer-fine">Ilustrasi, animasi, dan video: karya kelompok physiverse (SVG serta animasi yang dirender sendiri). Tidak memakai gambar berhak cipta pihak ketiga.</p>
+        <p class="footer-fine"><b>Domain publik.</b> Seluruh karya kami di situs ini &mdash; teks, kode, ilustrasi, animasi, dan video &mdash; dilepas ke domain publik di bawah <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener" target="_blank">CC0 1.0 Universal</a>. Materi pihak ketiga (kutipan dan tautan sumber) tetap milik pemiliknya masing-masing.</p>
+      </div>
+      <div>
+        <h3>Jelajah</h3>
+        <ul class="footer-list">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Artikel</h3>
+        <ul class="footer-list">
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone ANC</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kelompok</h3>
+        <ul class="footer-list">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+          <li><a href="index.html#artikel">Daftar artikel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Domain publik (CC0 1.0) &mdash; Kelompok physiverse, Universitas Negeri Jakarta. Tugas UTS Data Raya dan Pemrograman.</span>
+      <span>Dibangun dengan HTML, CSS, dan JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Kembali ke atas">&uarr;</button>
+<script src="js/main.js"></script>
+<!-- Cadangan data dimuat sebagai berkas JS (bukan JSON) agar tetap terbaca
+     walau halaman dibuka lewat file://, ketika fetch() diblokir browser. -->
+<script src="assets/data-fallback-jakarta.js"></script>
+<script src="js/lab.js"></script>
+</body>
+</html>

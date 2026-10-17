@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log Penggunaan AI — physiverse</title>
+<meta name="description" content="Log penggunaan AI generatif oleh kelompok physiverse: tujuan pemakaian, ringkasan prompt, serta hasil dan bentuk revisi maupun verifikasi yang kami lakukan.">
+<link rel="canonical" href="https://physiverse.netlify.app/log-ai.html">
+<meta name="theme-color" content="#554348">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="physiverse">
+<meta property="og:title" content="Log Penggunaan AI — physiverse">
+<meta property="og:description" content="Catatan transparan bagaimana AI dipakai dan diverifikasi dalam pengembangan website ini.">
+<meta property="og:url" content="https://physiverse.netlify.app/log-ai.html">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" title="CC0 1.0 Universal (Public Domain Dedication)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+<header class="site-header">
+  <div class="announce">
+    <div class="wrap">
+      <span>Edisi baru: <b>Physiverse Data Lab</b> &amp; <b>Glosarium Fisika</b> sudah dibuka</span>
+      <span class="dot-sep" aria-hidden="true">&middot;</span>
+      <a href="data-lab.html">Coba Data Lab &rarr;</a>
+    </div>
+  </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="physiverse, ke beranda">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#554348"/>
+        <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+        <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+        <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+        <circle cx="33" cy="13" r="2.2" fill="#D4F5F5"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">physi<em>verse</em></span>
+        <span class="brand-tag">Fisika di Sekitar Kita</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Artikel <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="index.html#artikel">Semua artikel</a></li>
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone anti-bising</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Jelajah <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Tentang <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-accent btn-sm nav-cta" href="data-lab.html">Data Lab &rarr;</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu navigasi">
+        <span class="bars"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div class="article-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Beranda</a></li>
+        <li>Log Penggunaan AI</li>
+      </ol>
+      <span class="badge">Transparansi</span>
+      <h1>Log Penggunaan AI</h1>
+      <p class="lede">
+        Tabel berikut mencatat bagaimana kami memakai AI generatif: untuk apa, prompt ringkas yang dipakai, serta apa yang kami
+        revisi atau verifikasi setelahnya. Tujuannya agar pembaca dan penguji dapat menilai sejauh mana peran AI dalam proyek ini.
+      </p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="callout note reveal">
+        <p class="callout-title"><span class="ico">&#128203;</span> Ringkasan singkat</p>
+        <p style="margin:0">
+          AI kami pakai untuk <strong>menyusun kerangka kode</strong> (HTML, CSS, JavaScript), <strong>mengusulkan struktur narasi</strong>,
+          dan <strong>menyunting bahasa</strong>. AI tidak kami pakai untuk memutuskan kebenaran fakta. Semua angka, istilah, dan
+          referensi tetap diverifikasi ke jurnal, buku, atau lembaga resmi oleh anggota yang memegang peran tersebut.
+        </p>
+      </div>
+
+      <div class="table-scroll reveal" style="margin-top:1.5rem">
+        <table>
+          <caption>Log penggunaan AI &mdash; versi ringkas. Versi lengkap (dengan tanggal dan tangkapan layar percakapan) dilampirkan pada laporan presentasi.</caption>
+          <thead>
+            <tr>
+              <th style="width:44px">No</th>
+              <th>Tujuan</th>
+              <th>Prompt (ringkas)</th>
+              <th>Hasil &amp; revisi / verifikasi yang dilakukan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Menyusun struktur beranda</td>
+              <td>"Buat kerangka halaman beranda website sains populer dengan bagian hero, sorotan artikel, dan penjelasan tema."</td>
+              <td>Kerangka awal dipakai, tetapi urutan bagian kami ubah: penyaring kategori dinaikkan ke dekat daftar artikel, dan kartu "isi artikel" kami tambahkan sendiri supaya pembaca tahu apa yang akan mereka dapat.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Membuat sistem warna &amp; tipografi</td>
+              <td>"Buat variabel CSS untuk palet #93B7BE, #554348, #D4F5F5, #8C9A9E, #747578 dan pasangan warna teks yang kontras."</td>
+              <td>Palet akhir ditetapkan oleh Designer &amp; Publisher, bukan AI. Kami menghitung ulang kontras warna teks utama terhadap latar agar tetap terbaca, karena usulan awal AI terlalu pucat untuk teks kecil.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Widget simulator layar sentuh</td>
+              <td>"Buat simulasi layar sentuh: pengguna memilih objek (jari, kuku, pensil, sarung tangan) lalu melihat apakah sentuhan terdeteksi."</td>
+              <td>Logika konduktif/tidak konduktif kami susun sendiri berdasarkan sumber. Kami menambahkan pengatur tekanan dan nilai perubahan kapasitansi, lalu menandainya jelas sebagai <em>nilai ilustratif</em> agar tidak disangka data pengukuran.</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Simulasi pelangi &amp; bentuk busur</td>
+              <td>"Buat visualisasi pelangi yang berubah dari setengah lingkaran menjadi lingkaran penuh ketika pengamat naik."</td>
+              <td>AI hanya memberi contoh dasar. Model geometri (horizon yang turun seiring ketinggian pengamat) kami sesuaikan setelah membaca artikel jurnal, lalu kami tambahkan tahapan jalur cahaya di dalam tetesan air.</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Simulator gelombang ANC</td>
+              <td>"Buat dua gelombang yang saling membatalkan beserta tombol untuk mengaktifkan anti-noise."</td>
+              <td>Kami menambahkan dua mode suara (konsisten dan mendadak) karena literatur menjelaskan ANC lemah pada suara tak berpola. Persentase reduksi dihitung langsung dari selisih gelombang di layar, bukan angka yang ditulis manual.</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Simulator kabut kopi</td>
+              <td>"Buat simulasi partikel uap yang menipis ketika suhu ruangan naik."</td>
+              <td>Kami ubah pendekatan: AI mengusulkan uap yang "menghilang", padahal secara fisika uap <em>menguap kembali</em>. Teks penjelasan diganti agar tidak menyesatkan, dan indikator diberi label "indeks kondensasi ilustratif".</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Simulator air fryer</td>
+              <td>"Buat animasi air fryer dengan pemanas dan kipas, serta perubahan warna makanan."</td>
+              <td>Angka suhu dan ambang reaksi Maillard kami ganti dengan rentang yang sesuai literatur (&plusmn;140&ndash;165&deg;C), lalu ditambah lencana status agar perubahan itu terlihat jelas oleh pembaca.</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Navigasi pada ponsel</td>
+              <td>"Menu navigasi di layar kecil jadi berantakan, tolong perbaiki."</td>
+              <td>Solusi awal AI hanya menyembunyikan menu. Kami menggantinya dengan panel yang bisa dibuka-tutup, bisa ditutup dengan tombol Esc, dan tetap dapat dijangkau papan ketik.</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Metadata SEO tiap halaman</td>
+              <td>"Tuliskan judul dan meta description untuk lima artikel serta halaman profil."</td>
+              <td>Draf AI dipakai sebagai bahan awal, lalu kami pendekkan agar tidak terpotong di hasil pencarian dan kami pastikan tidak ada judul yang kembar antarpage.</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Penyuntingan gaya bahasa</td>
+              <td>"Sederhanakan paragraf ini untuk pembaca SMA tanpa menghilangkan istilah teknisnya."</td>
+              <td>Content Writer menyunting ulang hasilnya karena beberapa istilah justru menjadi kabur. Setiap istilah teknis dipertahankan, tetapi selalu diberi penjelasan atau analogi di kalimat berikutnya.</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Pencarian referensi</td>
+              <td>"Cari jurnal tentang kapasitansi layar sentuh dan reaksi Maillard."</td>
+              <td>Paling banyak memerlukan koreksi. Beberapa rujukan yang disebut AI tidak dapat ditemukan saat dicek. Semua rujukan akhir kami verifikasi ulang melalui DOI dan data penerbit; yang gagal diverifikasi kami buang.</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Perbaikan teknis tampilan</td>
+              <td>"Kanvas terlihat pecah di layar beresolusi tinggi dan animasi tetap berjalan saat tidak terlihat."</td>
+              <td>Kami menambahkan penyesuaian kerapatan piksel (<em>device pixel ratio</em>) dan penghentian animasi otomatis saat elemen keluar dari layar. Animasi juga kami buat menghormati pengaturan <em>prefers-reduced-motion</em> pada perangkat pembaca.</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Redesain beranda bergaya majalah</td>
+              <td>"Buat beranda dengan hero video layar penuh, bagian sorotan, dan daftar fitur baru."</td>
+              <td>Struktur dan gaya visual kami rancang mengikuti contoh yang diberikan dosen (beranda bernuansa video seperti situs majalah). AI membantu menulis kerangka HTML/CSS-nya; keputusan akhir soal urutan bagian, ukuran huruf, dan kontras warna kami uji sendiri di layar ponsel dan komputer.</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Membuat video latar untuk hero</td>
+              <td>"Buat skrip Python yang menghasilkan video sains abstrak 12 detik, 30 fps, tanpa suara, untuk latar hero."</td>
+              <td>AI menulis kerangka awal dengan pustaka <em>numpy</em> dan <em>imageio</em>; komposisi akhir (ombak, partikel, cahaya) kami iterasi sendiri lewat pratinjau gambar sampai terlihat wajar. Video dirender sendiri, jadi tidak ada rekaman pihak ketiga, dan tetap disediakan gambar poster serta tautan film agar halaman tidak rusak bila video gagal dimuat.</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Physiverse Data Lab</td>
+              <td>"Buat dasbor cuaca interaktif mengambil data dari API publik, dengan grafik SVG tanpa pustaka tambahan."</td>
+              <td>Kami memilih sendiri API-nya (Open-Meteo, lisensi CC BY 4.0) dan menambahkan catatan bahwa data bukan pengukuran resmi BMKG. Kami menguji jalur <em>offline</em> dengan menyimpan snapshot data nyata sebagai cadangan, lalu memastikan rumus titik embun dan skala angin Beaufort mengikuti sumber yang dicantumkan.</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Glosarium Fisika</td>
+              <td>"Buat halaman glosarium yang bisa dicari dan disaring per cabang fisika, dengan penyorotan kata kunci."</td>
+              <td>Daftar istilah dan contoh penerapannya kami susun sendiri dari buku ajar, bukan disalin dari AI. AI menulis mesin pencarinya. Kami menguji bahwa mengetik "entropi", "resistansi", "pembiasan", atau "neutrino" memunculkan istilah yang tepat, dan bahwa penyorotan tidak merusak tanda teks.</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td>Fisika 60 Detik &amp; garis waktu sejarah</td>
+              <td>"Buat 10 kartu infografis singkat dan garis waktu penemuan fisika yang menyala saat digulir."</td>
+              <td>Seluruh gambar 10 kartu dan monogram potret fisikawan kami buat sendiri sebagai SVG. Isi garis waktu dan urutan tahun kami periksa terhadap artikel jurnal dan halaman lembaga resmi; beberapa peristiwa yang tidak bisa kami verifikasi kami hapus daripada menebak.</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>Halaman Nobel Fisika</td>
+              <td>"Susun daftar peraih Nobel Fisika dengan tahun dan alasan pemberiannya."</td>
+              <td>Justru di sini kami paling waspada: alih-alih memercayai ingatan AI, setiap kutipan alasan ("motivation") kami ambil langsung dari halaman resmi nobelprize.org per tahun, dan hanya tahun-tahun itu yang kami cantumkan. Penjelasan bahasa Indonesianya kami tulis ulang sendiri.</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td>Physics News 2026</td>
+              <td>"Carikan berita riset fisika terbaru beserta alamat sumbernya."</td>
+              <td>Beberapa usulan awal AI tidak dapat kami buka atau tidak mencantumkan sumber aslinya, jadi kami buang. Sisa berita kami telusuri balik ke halaman penerbitnya (icecube.wisc.edu, tuwien.at, xfel.eu, riken.jp, esa.int, quantamagazine.org, news.mit.edu, home.cern) dan hanya memakai yang benar-benar bisa dibuka pada 17 Oktober 2026.</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>Memeriksa daftar referensi &amp; tautan</td>
+              <td>"Periksa apakah DOI dan tautan pada halaman Sumber masih aktif dan sesuai judulnya."</td>
+              <td>Pemeriksaan dilakukan dengan mengambil data resmi dari Crossref (bukan dari AI). Semua DOI artikel jurnal dicek satu per satu dan judulnya dicocokkan; tautan yang tidak dapat dibuka kami ganti dengan halaman resmi lain, dan satu rujukan yang gagal diperiksa kami hapus.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout warn reveal">
+        <p class="callout-title"><span class="ico">&#9888;</span> Refleksi penggunaan AI</p>
+        <p>
+          AI paling membantu pada pekerjaan yang bersifat mekanis: menulis kerangka kode, mencari padanan kata, dan menyusun tabel.
+          AI paling berisiko ketika diminta mengingat fakta, mencari sumber, atau menyimpulkan besaran numerik — pada bagian itu
+          kami selalu memeriksa ulang, dan beberapa kali menemukan jawaban yang terdengar masuk akal tetapi ternyata keliru.
+        </p>
+        <p style="margin:0">
+          Karena itu prinsip kami sederhana: <strong>AI mempercepat pekerjaan, tetapi manusia yang memverifikasi dan bertanggung jawab
+          atas isi.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#3a2d31"/>
+            <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+            <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+            <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+          </svg>
+          <span class="brand-name">physi<em>verse</em></span>
+        </div>
+        <p style="font-size:.9rem;max-width:44ch">Sains populer tentang fisika di sekitar kita. Understanding the Science Behind Everyday Life.</p>
+        <p class="footer-fine">Ilustrasi, animasi, dan video: karya kelompok physiverse (SVG serta animasi yang dirender sendiri). Tidak memakai gambar berhak cipta pihak ketiga.</p>
+        <p class="footer-fine"><b>Domain publik.</b> Seluruh karya kami di situs ini &mdash; teks, kode, ilustrasi, animasi, dan video &mdash; dilepas ke domain publik di bawah <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener" target="_blank">CC0 1.0 Universal</a>. Materi pihak ketiga (kutipan dan tautan sumber) tetap milik pemiliknya masing-masing.</p>
+      </div>
+      <div>
+        <h3>Jelajah</h3>
+        <ul class="footer-list">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Artikel</h3>
+        <ul class="footer-list">
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone ANC</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kelompok</h3>
+        <ul class="footer-list">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+          <li><a href="index.html#artikel">Daftar artikel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Domain publik (CC0 1.0) &mdash; Kelompok physiverse, Universitas Negeri Jakarta. Tugas UTS Data Raya dan Pemrograman.</span>
+      <span>Dibangun dengan HTML, CSS, dan JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Kembali ke atas">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>

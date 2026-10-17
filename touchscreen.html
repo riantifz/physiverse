@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenapa Layar HP Bisa Ngerespon Sentuhan Jari Kita? — physiverse</title>
+<meta name="description" content="Kaca layar ponsel adalah isolator, jadi bagaimana ia tahu jarimu menyentuh? Jawabannya ada di lapisan Indium Tin Oxide dan efek kapasitansi. Lengkap dengan simulator layar sentuh.">
+<link rel="canonical" href="https://physiverse.netlify.app/touchscreen.html">
+<meta name="author" content="Muhammad Lutfi">
+<meta name="theme-color" content="#554348">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="physiverse">
+<meta property="og:title" content="Kenapa Layar HP Bisa Ngerespon Sentuhan Jari Kita?">
+<meta property="og:description" content="Padahal kaca itu isolator. Rahasianya ada di lapisan transparan setipis mikro yang bisa mengalirkan listrik.">
+<meta property="og:url" content="https://physiverse.netlify.app/touchscreen.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" title="CC0 1.0 Universal (Public Domain Dedication)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Kenapa Layar HP Bisa Ngerespon Sentuhan Jari Kita?",
+  "description": "Penjelasan fisika layar sentuh kapasitif: lapisan ITO, kapasitansi tubuh, dan mengapa kuku atau sarung tangan biasa tidak terdeteksi.",
+  "inLanguage": "id",
+  "author": { "@type": "Person", "name": "Muhammad Lutfi" },
+  "publisher": { "@type": "Organization", "name": "physiverse" },
+  "datePublished": "2026-10-16",
+  "mainEntityOfPage": "https://physiverse.netlify.app/touchscreen.html"
+}
+</script>
+</head>
+<body>
+<div class="progress-bar" aria-hidden="true"><span id="progress"></span></div>
+<a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+<header class="site-header">
+  <div class="announce">
+    <div class="wrap">
+      <span>Edisi baru: <b>Physiverse Data Lab</b> &amp; <b>Glosarium Fisika</b> sudah dibuka</span>
+      <span class="dot-sep" aria-hidden="true">&middot;</span>
+      <a href="data-lab.html">Coba Data Lab &rarr;</a>
+    </div>
+  </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="physiverse, ke beranda">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#554348"/>
+        <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+        <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+        <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+        <circle cx="33" cy="13" r="2.2" fill="#D4F5F5"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">physi<em>verse</em></span>
+        <span class="brand-tag">Fisika di Sekitar Kita</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Artikel <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="index.html#artikel">Semua artikel</a></li>
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone anti-bising</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Jelajah <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Tentang <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-accent btn-sm nav-cta" href="data-lab.html">Data Lab &rarr;</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu navigasi">
+        <span class="bars"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="article-hero">
+    <div class="wrap">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="index.html#artikel">Artikel</a></li>
+        <li>Layar sentuh</li>
+      </ol>
+      <span class="badge">Gadget &amp; Teknologi</span>
+      <h1>Kenapa Layar HP Bisa Ngerespon Sentuhan Jari Kita? (Padahal Kaca Itu Isolator!)</h1>
+      <p class="lede">
+        Kita menggesek layar ponsel ratusan kali sehari tanpa berpikir. Tapi begitu memakai kuku atau sarung tangan, layar mendadak "cuek".
+        Ternyata jawabannya bukan terletak pada kacanya, melainkan pada lapisan tak terlihat di bawahnya.
+      </p>
+      <div class="article-meta">
+        <span>Penulis: <b>Muhammad Lutfi</b> (Prompt Engineer &amp; Developer)</span>
+        <span>16 Oktober 2026</span>
+        <span><b data-reading-time=".prose">5 menit baca</b></span>
+        <span><button class="btn btn-sm btn-ghost" type="button" data-copy-link>Salin tautan</button></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <figure class="figure-plate">
+      <svg viewBox="0 0 800 380" role="img" aria-label="Diagram penampang layar ponsel: jari menyentuh kaca, di bawahnya terdapat lapisan konduktif Indium Tin Oxide yang terhubung ke pengendali.">
+        <defs>
+          <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#3a2d31"/><stop offset="1" stop-color="#2b2226"/>
+          </linearGradient>
+          <linearGradient id="glow1" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#D4F5F5" stop-opacity=".55"/><stop offset="1" stop-color="#93B7BE" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect width="800" height="380" fill="url(#sky1)"/>
+
+        <!-- lapisan layar -->
+        <rect x="120" y="150" width="560" height="26" rx="6" fill="#93B7BE" opacity=".35"/>
+        <rect x="120" y="176" width="560" height="18" fill="#D4F5F5" opacity=".85"/>
+        <rect x="120" y="194" width="560" height="26" fill="#8C9A9E" opacity=".45"/>
+        <rect x="120" y="220" width="560" height="70" rx="8" fill="#554348"/>
+
+        <!-- elektroda pada lapisan ITO -->
+        <g fill="#41606a">
+          <rect x="150" y="178" width="500" height="14" fill="none" stroke="#41606a" stroke-width="0"/>
+        </g>
+        <g stroke="#5C8189" stroke-width="2" opacity=".9">
+          <line x1="160" y1="177" x2="160" y2="193"/><line x1="230" y1="177" x2="230" y2="193"/>
+          <line x1="300" y1="177" x2="300" y2="193"/><line x1="370" y1="177" x2="370" y2="193"/>
+          <line x1="440" y1="177" x2="440" y2="193"/><line x1="510" y1="177" x2="510" y2="193"/>
+          <line x1="580" y1="177" x2="580" y2="193"/><line x1="650" y1="177" x2="650" y2="193"/>
+        </g>
+
+        <!-- medan listrik dari jari -->
+        <path d="M400 62 C 350 96, 340 128, 400 176" fill="url(#glow1)" opacity=".7"/>
+        <path d="M400 62 C 450 96, 460 128, 400 176" fill="url(#glow1)" opacity=".7"/>
+        <g stroke="#D4F5F5" stroke-width="1.6" fill="none" opacity=".55" stroke-dasharray="5 6">
+          <path d="M352 84 C 372 118, 384 146, 396 174"/>
+          <path d="M448 84 C 428 118, 416 146, 404 174"/>
+        </g>
+
+        <!-- jari -->
+        <g>
+          <rect x="360" y="18" width="80" height="86" rx="34" fill="#e7c9b4"/>
+          <rect x="360" y="18" width="80" height="86" rx="34" fill="#93B7BE" opacity=".18"/>
+          <rect x="368" y="30" width="64" height="52" rx="24" fill="#d8ac93" opacity=".7"/>
+        </g>
+
+        <!-- pengendali -->
+        <rect x="560" y="300" width="150" height="52" rx="10" fill="#3a2d31" stroke="#8C9A9E"/>
+        <text x="635" y="331" text-anchor="middle" fill="#D4F5F5" font-family="Inter, sans-serif" font-size="13" font-weight="600">pengendali sentuh</text>
+        <line x1="650" y1="222" x2="650" y2="300" stroke="#8C9A9E" stroke-width="2" stroke-dasharray="6 4"/>
+
+        <!-- label -->
+        <g fill="#D4F5F5" font-family="Inter, sans-serif" font-size="13">
+          <text x="700" y="158" font-weight="600">kaca</text>
+          <text x="700" y="190" font-weight="600" fill="#D4F5F5">ITO</text>
+          <text x="700" y="212" fill="#b9c6c8" font-size="11">(transparan + konduktif)</text>
+          <text x="700" y="247" fill="#b9c6c8" font-size="11">panel tampilan</text>
+        </g>
+        <text x="400" y="368" text-anchor="middle" fill="#b9c6c8" font-family="Inter, sans-serif" font-size="12">Penampang layar ponsel (ilustrasi, tidak berskala)</text>
+      </svg>
+      <figcaption>Jari tidak "menekan" layar untuk dikenali. Yang dibaca sensor adalah perubahan medan listrik pada lapisan konduktif di bawah kaca.</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap article-layout">
+
+    <article class="prose">
+      <p>
+        Coba ingat seberapa sering kamu menyentuh layar ponsel hari ini: membalas chat, menggeser video, sampai memencet tombol di aplikasi
+        belanja. Semuanya lancar — sampai kita memakai kuku, ujung pensil, atau sarung tangan biasa, dan layar langsung tidak peduli.
+      </p>
+      <p>
+        Pertanyaannya sederhana: permukaan layar ponsel terbuat dari kaca, dan kaca adalah <strong>isolator</strong> yang tidak menghantarkan
+        listrik. Lalu bagaimana layar tahu ada jari menyentuhnya? Jawabannya ada di lapisan yang tidak pernah terlihat mata.
+      </p>
+
+      <div class="poll" data-poll-id="touchscreen">
+        <h3>Cek dulu sebelum membaca</h3>
+        <p class="poll-sub">Menurutmu, apakah <b>menempelkan kuku</b> ke layar HP bisa mengoperasikannya?</p>
+        <div class="poll-options">
+          <button class="poll-option" type="button"><span class="bar"></span><span class="row"><span>Bisa, sama seperti jari</span><span class="pct">0%</span></span></button>
+          <button class="poll-option" type="button"><span class="bar"></span><span class="row"><span>Tidak bisa sama sekali</span><span class="pct">0%</span></span></button>
+          <button class="poll-option" type="button"><span class="bar"></span><span class="row"><span>Bisa, tapi harus ditekan kuat</span><span class="pct">0%</span></span></button>
+        </div>
+        <div class="poll-foot">
+          <span><b class="poll-total">0</b> pembaca menjawab</span>
+          <button class="poll-reset btn btn-sm btn-ghost" type="button">Ulangi</button>
+        </div>
+        <p class="poll-count" style="font-size:.82rem;margin:.6rem 0 0;color:var(--ink-mute)"></p>
+      </div>
+
+      <h2 id="lapisan-gaib">1. Kaca memang isolator — dan itu justru disengaja</h2>
+      <p>
+        Kaca yang tidak menghantarkan listrik bukan kelemahan, melainkan syarat keamanan. Kalau permukaan layar bersifat konduktif,
+        seluruh bidangnya akan menjadi satu konduktor besar yang mudah terpengaruh benda apa pun, bahkan tangan yang hanya lewat di dekatnya.
+      </p>
+      <p>
+        Di bawah kaca, pada kedalaman yang jauh lebih tipis daripada selembar kertas, ada lapisan bernama <strong>Indium Tin Oxide (ITO)</strong>.
+        ITO istimewa karena punya dua sifat sekaligus: transparan sehingga layar tetap terang, dan konduktif sehingga bisa mengalirkan
+        listrik<sup class="cite"><a href="#ref-3">[3]</a></sup>. Lapisan setipis puluhan nanometer ini dipasang sebagai pola jaring-jaring
+        elektroda yang sangat halus<sup class="cite"><a href="#ref-1">[1]</a></sup>. Elektroda itu terus diberi arus kecil oleh sebuah
+        pengendali, sehingga permukaan layar selalu memiliki medan listrik lemah yang stabil. Kondisi "diam" itulah patokan sensor.
+      </p>
+
+      <div class="callout note">
+        <p class="callout-title"><span class="ico">&#128161;</span> Kenapa harus ITO, bukan logam biasa?</p>
+        <p style="margin:0">
+          Logam memang konduktor terbaik, tapi tidak transparan. ITO termasuk golongan <em>transparent conducting oxide</em> — langka,
+          karena harus "dua sifat sekaligus". Indium umumnya diperoleh sebagai produk samping penambangan seng dan timah, dan
+          ketersediaannya terbatas<sup class="cite"><a href="#ref-4">[4]</a></sup>. Itulah sebabnya banyak laboratorium mencari
+          penggantinya, misalnya graphene atau jaringan nanowire perak.
+        </p>
+      </div>
+
+      <h2 id="kapasitor-alami">2. Tubuh kita adalah kapasitor alami</h2>
+      <p>
+        Sekarang bagian serunya. Sekitar 60% tubuh manusia terdiri atas air, dan air tubuh mengandung garam serta ion yang membuatnya
+        menjadi konduktor yang cukup baik. Jadi meski lapisan luar kulit bersifat isolator, bagian dalam jari kita sebenarnya "kabel basah".
+      </p>
+      <p>
+        Ketika ujung jari menyentuh kaca, jari dan elektroda ITO membentuk susunan yang dalam fisika disebut <strong>kapasitor</strong>:
+        dua konduktor yang dipisahkan bahan isolator<sup class="cite"><a href="#ref-2">[2]</a></sup>. Kaca berperan sebagai isolator
+        (<em>dielektrik</em>), jari sebagai konduktor pertama, dan elektroda ITO sebagai konduktor kedua.
+      </p>
+
+      <div class="formula">
+        <span class="lbl">Kapasitansi pelat sejajar</span>
+        C = &epsilon; &middot; A / d
+        <div style="font-family:var(--font-body);font-size:.85rem;color:#b9c6c8;margin-top:.6rem">
+          C = kapasitansi (farad) &nbsp;&bull;&nbsp; &epsilon; = permitivitas dielektrik &nbsp;&bull;&nbsp; A = luas bidang &nbsp;&bull;&nbsp; d = jarak antar pelat
+        </div>
+      </div>
+
+      <p>
+        Perhatikan rumus di atas: jarak <em>d</em> ada di penyebut. Saat jarimu turun mendekati layar, <em>d</em> mengecil dan luas area
+        yang berpasangan bertambah, sehingga kapasitansi <em>C</em> naik. Sensor tidak perlu mengenali sidik jarimu; ia hanya perlu tahu
+        bahwa kapasitansi di sebuah titik berubah. Analoginya, bayangkan jutaan semut listrik berdiri rapi di bawah kaca — begitu jarimu
+        menempel, sebagian semut tepat di bawah jarimu "loncat" tertarik ke jarimu.
+      </p>
+
+      <h2 id="koordinat">3. Dari kebocoran muatan menjadi koordinat</h2>
+      <p>
+        Layar ponsel modern memakai metode <em>projected capacitive</em>. Elektroda ITO dibentuk sebagai dua set garis yang saling silang:
+        satu set mengirim sinyal (TX), satu set menerima (RX). Di setiap persilangan terbentuk satu node sensor, dan satu layar 6 inci
+        bisa memiliki lebih dari seribu node<sup class="cite"><a href="#ref-1">[1]</a></sup>.
+      </p>
+      <p>
+        Pengendali memindai seluruh node secara bergiliran, ratusan kali per detik. Pada node di bawah jarimu, sebagian muatan "dicuri"
+        oleh tubuhmu sehingga sinyal RX melemah; titik dengan penurunan terbesar itulah lokasimu. Karena node hanya berukuran milimeter,
+        pengendali melakukan interpolasi dari node tetangga untuk menghasilkan koordinat presisi, lengkap dengan informasi apakah itu satu
+        jari atau dua jari sekaligus untuk <em>pinch zoom</em>. Semua terjadi dalam hitungan milidetik.
+      </p>
+
+      <h2 id="kuku-pensil">4. Kenapa kuku, pensil, dan sarung tangan biasa gagal</h2>
+      <p>
+        Sekarang kita bisa menjawab pertanyaan pembuka. Kuku tersusun dari keratin, kayu pensil dari selulosa, dan serat katun atau wol
+        pada sarung tangan — semuanya isolator. Benda-benda itu tidak mampu menyalurkan maupun menyerap muatan listrik dari lapisan
+        ITO<sup class="cite"><a href="#ref-2">[2]</a></sup>. Tidak ada node yang berubah kapasitansinya, jadi bagi pengendali layar
+        sedang tidak disentuh apa pun, bahkan bila kamu menekannya sekuat tenaga.
+      </p>
+
+      <div class="fact-grid">
+        <div class="fact"><b>1&ndash;2 ms</b><span>perkiraan waktu respons satu sentuhan</span></div>
+        <div class="fact"><b>&plusmn;42%</b><span>perubahan kapasitansi ilustratif saat jari menempel</span></div>
+        <div class="fact"><b>&plusmn;10 nm</b><span>ketebalan tipikal lapisan ITO</span></div>
+        <div class="fact"><b>1.000+</b><span>node sensor pada satu layar ponsel</span></div>
+      </div>
+
+      <h2 id="simulator">5. Coba sendiri: simulator layar sentuh</h2>
+      <p>
+        Teori di atas lebih mudah diingat kalau kamu mencobanya. Pilih objek yang akan menyentuh layar, atur tekanan, lalu sentuh area
+        ponsel. Perhatikan node mana yang "menyala" dan berapa perubahan kapasitansi yang terbaca.
+      </p>
+
+      <div class="widget" data-widget="touch">
+        <div class="widget-head">
+          <h3>Simulator layar sentuh kapasitif</h3>
+          <span class="badge">Interaktif</span>
+        </div>
+        <div class="widget-body">
+          <p style="font-size:.92rem;margin-bottom:.9rem">
+            Langkah: (1) pilih objek sentuh, (2) atur tekanan, (3) klik atau ketuk area layar ponsel pada gambar.
+          </p>
+          <div class="widget-stage">
+            <svg id="ts-stage" viewBox="0 0 520 300" tabindex="0" role="button" aria-label="Layar ponsel untuk diuji sentuh. Klik atau tekan Enter untuk menyentuh bagian tengah layar.">
+              <rect x="44" y="30" width="432" height="240" rx="26" fill="#3a2d31" stroke="#8C9A9E" stroke-width="2"/>
+              <rect x="60" y="52" width="400" height="196" rx="8" fill="#1b1719"/>
+              <rect x="60" y="52" width="400" height="196" rx="8" fill="none" stroke="#5C8189" stroke-width="1.5" opacity=".8"/>
+              <g id="ts-grid"></g>
+              <g id="ts-lit"></g>
+              <g id="ts-ripple"></g>
+              <rect x="232" y="264" width="56" height="4" rx="2" fill="#8C9A9E" opacity=".7"/>
+              <text x="260" y="46" text-anchor="middle" fill="#8C9A9E" font-family="Inter, sans-serif" font-size="11">lapisan ITO &mdash; ketuk area ini</text>
+            </svg>
+          </div>
+          <div class="widget-controls" role="group" aria-label="Pilih objek yang menyentuh layar">
+            <button class="chip is-on" type="button" data-obj="jari" aria-pressed="true">Jari telanjang</button>
+            <button class="chip" type="button" data-obj="kuku" aria-pressed="false">Kuku</button>
+            <button class="chip" type="button" data-obj="pensil" aria-pressed="false">Pensil kayu</button>
+            <button class="chip" type="button" data-obj="sarungtangan" aria-pressed="false">Sarung tangan biasa</button>
+            <button class="chip" type="button" data-obj="stylus" aria-pressed="false">Stylus konduktif</button>
+            <button class="chip" type="button" data-obj="sarungtangan_touch" aria-pressed="false">Sarung tangan touchscreen</button>
+          </div>
+          <div class="slider-row">
+            <label for="ts-force">Tekanan sentuh <span id="ts-force-out">1.0&times;</span></label>
+            <input type="range" id="ts-force" min="0.5" max="3" step="0.1" value="1">
+          </div>
+          <div class="widget-readout" id="ts-readout">
+            <span class="status status-idle" id="ts-status">Siap menerima sentuhan</span>
+            <h4 id="ts-title">Jari telanjang dipilih</h4>
+            <p id="ts-desc">Sentuh area layar ponsel untuk menguji apakah sentuhan ini terdeteksi.</p>
+            <div class="meter" id="ts-meter"><span></span></div>
+            <p class="widget-note">Perubahan kapasitansi terbaca: <b><span id="ts-delta">0,0</span> pF</b> &mdash; nilai ilustratif, bukan hasil pengukuran nyata.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="tahukah-kamu">6. Tahukah kamu?</h2>
+      <div class="callout fun">
+        <p class="callout-title"><span class="ico">&#10067;</span> Kok ada sarung tangan yang bisa dipakai main HP?</p>
+        <p>
+          Sarung tangan biasa gagal karena kainnya isolator. Sarung tangan khusus <em>touchscreen</em> menyisipkan benang konduktif —
+          biasanya serat logam mikro atau karbon — pada ujung jari. Benang itu menjadi jembatan bagi muatan listrik tubuhmu untuk
+          mencapai layar<sup class="cite"><a href="#ref-1">[1]</a></sup>.
+        </p>
+      </div>
+
+      <h2 id="faq">7. Pertanyaan yang sering ditanyakan</h2>
+      <div class="accordion">
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-t1">Kenapa HP tidak bisa disentuh saat memakai sarung tangan biasa?<span class="sign">+</span></button>
+          <div class="acc-panel" id="faq-t1">
+            <p>Karena kain wol atau katun adalah isolator yang memutus jalur muatan listrik antara kulit jari dan lapisan ITO. Sensor
+            tidak merasakan perubahan kapasitansi, jadi layar tidak tahu ada yang menyentuhnya.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-t2">Kalau begitu, kenapa layar kadang salah baca saat tangan basah?<span class="sign">+</span></button>
+          <div class="acc-panel" id="faq-t2">
+            <p>Air yang membasahi layar bertindak sebagai konduktor tambahan dan menyebar ke banyak node sekaligus. Pengendali menerima
+            pola perubahan kapasitansi yang tidak rapi, sehingga bisa muncul sentuhan "hantu" atau perintah yang salah. Itulah alasan
+            layar touchscreen sebaiknya dikeringkan dulu.</p>
+          </div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-btn" type="button" aria-expanded="false" aria-controls="faq-t3">Apakah menekan lebih keras membuat sentuhan lebih mudah terbaca?<span class="sign">+</span></button>
+          <div class="acc-panel" id="faq-t3">
+            <p>Tidak. Layar kapasitif membaca perubahan medan listrik, bukan besarnya tekanan. Layar yang mendukung deteksi tekanan
+            (<em>force touch</em>) memakai sensor tambahan khusus, bukan menambah sensitivitas lapisan ITO.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="sumber">Daftar sumber</h2>
+      <ol class="ref-list">
+        <li id="ref-1">
+          <span class="ref-title">Gray, T. (2019). <em>Projected Capacitive Touch: A Practical Guide for Engineers</em>. Springer.</span>
+          <span class="ref-meta">DOI: <a href="https://doi.org/10.1007/978-3-319-98392-9" rel="noopener">10.1007/978-3-319-98392-9</a></span>
+        </li>
+        <li id="ref-2">
+          <span class="ref-title">Serway, R. A., &amp; Jewett, J. W. (2018). <em>Physics for Scientists and Engineers</em> (10th ed.). Cengage Learning.</span>
+          <span class="ref-meta">Bab tentang kapasitansi dan dielektrik.</span>
+        </li>
+        <li id="ref-3">
+          <span class="ref-title">Wikipedia contributors. <em>Indium tin oxide</em>. Wikipedia, The Free Encyclopedia.</span>
+          <span class="ref-meta"><a href="https://en.wikipedia.org/wiki/Indium_tin_oxide" rel="noopener">en.wikipedia.org/wiki/Indium_tin_oxide</a> (diakses 16 Oktober 2026)</span>
+        </li>
+        <li id="ref-4">
+          <span class="ref-title">U.S. Geological Survey. <em>Indium &mdash; Mineral Commodity Summaries</em>.</span>
+          <span class="ref-meta"><a href="https://pubs.usgs.gov/periodicals/mcs2024/mcs2024-indium.pdf" rel="noopener">pubs.usgs.gov/periodicals/mcs2024/mcs2024-indium.pdf</a></span>
+        </li>
+      </ol>
+      <p class="notice"><b>Catatan verifikasi:</b> semua istilah teknis dan urutan penjelasan pada artikel ini diperiksa oleh Researcher &amp; Fact-Checker kelompok, lalu dicocokkan dengan buku dan lembaga resmi pada daftar di atas. Nilai numerik yang diberi label "ilustratif" dipakai hanya untuk memperjelas simulasi, bukan sebagai hasil pengukuran.</p>
+    </article>
+
+    <aside class="toc" aria-label="Daftar isi artikel">
+      <h2>Daftar isi</h2>
+      <ol></ol>
+    </aside>
+  </div>
+
+  <div class="wrap">
+    <nav class="article-nav" aria-label="Navigasi antarartikel">
+      <a href="index.html"><span class="dir">&larr; Kembali</span><b>Beranda &amp; daftar artikel</b></a>
+      <a href="pelangi.html" style="text-align:right"><span class="dir">Artikel berikutnya &rarr;</span><b>Kenapa pelangi melengkung?</b></a>
+    </nav>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#3a2d31"/>
+            <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+            <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+            <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+          </svg>
+          <span class="brand-name">physi<em>verse</em></span>
+        </div>
+        <p style="font-size:.9rem;max-width:44ch">Sains populer tentang fisika di sekitar kita. Understanding the Science Behind Everyday Life.</p>
+        <p class="footer-fine">Ilustrasi, animasi, dan video: karya kelompok physiverse (SVG serta animasi yang dirender sendiri). Tidak memakai gambar berhak cipta pihak ketiga.</p>
+        <p class="footer-fine"><b>Domain publik.</b> Seluruh karya kami di situs ini &mdash; teks, kode, ilustrasi, animasi, dan video &mdash; dilepas ke domain publik di bawah <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener" target="_blank">CC0 1.0 Universal</a>. Materi pihak ketiga (kutipan dan tautan sumber) tetap milik pemiliknya masing-masing.</p>
+      </div>
+      <div>
+        <h3>Jelajah</h3>
+        <ul class="footer-list">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Artikel</h3>
+        <ul class="footer-list">
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone ANC</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kelompok</h3>
+        <ul class="footer-list">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+          <li><a href="index.html#artikel">Daftar artikel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Domain publik (CC0 1.0) &mdash; Kelompok physiverse, Universitas Negeri Jakarta. Tugas UTS Data Raya dan Pemrograman.</span>
+      <span>Dibangun dengan HTML, CSS, dan JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" type="button" aria-label="Kembali ke atas">&uarr;</button>
+<script src="js/main.js"></script>
+<script src="js/widgets.js"></script>
+</body>
+</html>

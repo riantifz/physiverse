@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>physiverse — Fisika di Sekitar Kita | Artikel, Data Lab, Glosarium</title>
+<meta name="description" content="physiverse membedah fisika dari benda sehari-hari, ditambah Physiverse Data Lab (grafik cuaca interaktif), glosarium fisika, penjelasan 60 detik, sejarah sains, berita fisika, dan Nobel Fisika.">
+<!-- GANTI domain di bawah ini setelah website dipublikasikan (canonical, og:url) -->
+<link rel="canonical" href="https://physiverse.netlify.app/">
+<meta name="author" content="Kelompok physiverse — Pendidikan Fisika">
+<meta name="theme-color" content="#554348">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="physiverse">
+<meta property="og:title" content="physiverse — Fisika di Sekitar Kita">
+<meta property="og:description" content="Artikel populer, Data Lab interaktif, glosarium fisika, penjelasan 60 detik, sejarah sains, berita fisika, dan Nobel Fisika.">
+<meta property="og:url" content="https://physiverse.netlify.app/">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="physiverse — Fisika di Sekitar Kita">
+<meta name="twitter:description" content="Membedah fisika dari benda yang kamu pakai setiap hari, lengkap dengan data dan simulasi.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/" title="CC0 1.0 Universal (Public Domain Dedication)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "physiverse",
+  "alternateName": "Fisika di Sekitar Kita",
+  "url": "https://physiverse.netlify.app/",
+  "inLanguage": "id",
+  "description": "Website sains populer berbahasa Indonesia: artikel fisika sehari-hari, Data Lab interaktif, glosarium, sejarah sains, dan berita fisika.",
+  "publisher": { "@type": "Organization", "name": "Kelompok physiverse — Universitas Negeri Jakarta" }
+}
+</script>
+</head>
+<body class="page-home">
+<a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+<header class="site-header">
+  <div class="announce">
+    <div class="wrap">
+      <span>Edisi baru: <b>Physiverse Data Lab</b> &amp; <b>Glosarium Fisika</b> sudah dibuka</span>
+      <span class="dot-sep" aria-hidden="true">&middot;</span>
+      <a href="data-lab.html">Coba Data Lab &rarr;</a>
+    </div>
+  </div>
+  <div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="physiverse, ke beranda">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="#554348"/>
+        <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+        <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+        <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+        <circle cx="33" cy="13" r="2.2" fill="#D4F5F5"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">physi<em>verse</em></span>
+        <span class="brand-tag">Fisika di Sekitar Kita</span>
+      </span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Artikel <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="index.html#artikel">Semua artikel</a></li>
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone anti-bising</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Jelajah <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </li>
+      <li class="has-menu">
+        <button class="nav-btn" type="button" aria-expanded="false" aria-haspopup="true">Tentang <span class="caret" aria-hidden="true"></span></button>
+        <ul class="submenu">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+        </ul>
+      </li>
+    </ul>
+    <div class="nav-actions">
+      <a class="btn btn-accent btn-sm nav-cta" href="data-lab.html">Data Lab &rarr;</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu navigasi">
+        <span class="bars"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO VIDEO ============ -->
+  <section class="hero-video" aria-label="Pembuka">
+    <div class="hv-media">
+      <img src="assets/hero-poster.jpg" alt="" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.jpg" aria-hidden="true" tabindex="-1">
+        <source src="assets/hero-physiverse.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hv-scrim" aria-hidden="true"></div>
+
+    <div class="wrap hv-inner">
+      <p class="hv-eyebrow">Fisika yang kamu pakai tiap hari</p>
+      <h1 class="hv-title">Fisika di balik <em>hal yang biasa</em>.</h1>
+      <p class="hv-sub">
+        Layar HP yang merasakan jarimu, pelangi yang selalu urut, headphone yang membatalkan bising.
+        Kami menjelaskannya dengan bahasa yang enak dibaca &mdash; lalu mengajakmu <b>mengolah datanya sendiri</b>.
+      </p>
+      <div class="hv-cta">
+        <a class="btn btn-accent" href="data-lab.html">Jelajahi Data Lab &rarr;</a>
+        <button class="hv-play" type="button" data-open-film>
+          <span class="ring" aria-hidden="true"><span class="tri"></span></span>
+          <span>Tonton film</span>
+        </button>
+        <a class="btn btn-ghost" href="#artikel" style="background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.38);color:#fff">Mulai membaca</a>
+      </div>
+      <div class="hv-foot">
+        <span class="hv-live">
+          <span class="dot" aria-hidden="true"></span>
+          <span>Animasi asli kelompok</span>
+          <button class="hv-mute hv-toggle" type="button" aria-pressed="false"><span class="hv-toggle-label">Jeda video</span></button>
+        </span>
+        <a class="hv-scroll" href="#sorotan">Scroll untuk menjelajah <span class="arr" aria-hidden="true">&darr;</span></a>
+      </div>
+      <p class="hv-credit">Latar: animasi gelombang &amp; cahaya yang dirender sendiri dari persamaan sinus (lihat <a href="sumber.html" style="color:#cfd9db">halaman Sumber</a>).</p>
+    </div>
+  </section>
+
+  <!-- ============ SOROTAN ============ -->
+  <section id="sorotan">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Sorotan edisi ini</p>
+          <h2>Dibuka dari benda yang paling sering kamu sentuh</h2>
+          <p>Setiap artikel ditulis satu anggota kelompok, diperiksa sumbernya, dan dilengkapi simulasi yang bisa kamu coba sendiri.</p>
+        </div>
+      </div>
+
+      <a class="spotlight reveal" href="touchscreen.html">
+        <div class="sp-art">
+          <svg viewBox="0 0 520 320" aria-hidden="true">
+            <defs>
+              <linearGradient id="sp1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3a2d31"/><stop offset="1" stop-color="#554348"/>
+              </linearGradient>
+              <linearGradient id="sp2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#D4F5F5" stop-opacity=".0"/><stop offset="1" stop-color="#93B7BE" stop-opacity=".45"/>
+              </linearGradient>
+            </defs>
+            <rect width="520" height="320" fill="url(#sp1)"/>
+            <rect y="250" width="520" height="70" fill="url(#sp2)"/>
+            <g stroke="#93B7BE" stroke-width="1" opacity=".5">
+              <path d="M0 60 H520"/><path d="M0 120 H520"/><path d="M0 180 H520"/>
+              <path d="M90 0 V320"/><path d="M200 0 V320"/><path d="M310 0 V320"/><path d="M420 0 V320"/>
+            </g>
+            <g fill="none" stroke="#D4F5F5" stroke-width="1.4" opacity=".85">
+              <circle cx="250" cy="168" r="30"/><circle cx="250" cy="168" r="58" opacity=".6"/><circle cx="250" cy="168" r="86" opacity=".35"/>
+            </g>
+            <rect x="214" y="60" width="72" height="222" rx="14" fill="#2a2124" stroke="#93B7BE"/>
+            <rect x="224" y="76" width="52" height="176" rx="6" fill="#93B7BE" opacity=".18"/>
+            <g fill="#D4F5F5">
+              <circle cx="250" cy="168" r="6"/>
+              <circle cx="228" cy="146" r="3.4" opacity=".9"/><circle cx="272" cy="190" r="3.4" opacity=".9"/>
+              <circle cx="270" cy="144" r="3" opacity=".7"/><circle cx="230" cy="192" r="3" opacity=".7"/>
+              <circle cx="250" cy="128" r="2.6" opacity=".55"/><circle cx="250" cy="208" r="2.6" opacity=".55"/>
+            </g>
+            <path d="M360 130 q26 38 0 76" stroke="#D4F5F5" stroke-width="3" fill="none" opacity=".7"/>
+            <path d="M386 112 q44 56 0 112" stroke="#D4F5F5" stroke-width="3" fill="none" opacity=".4"/>
+            <text x="24" y="300" fill="#D4F5F5" font-family="JetBrains Mono, monospace" font-size="13" opacity=".8">kapasitansi &#916;C = 4,6 pF</text>
+          </svg>
+        </div>
+        <div class="sp-body">
+          <span class="badge">Gadget &amp; Teknologi</span>
+          <h2>Kenapa Layar HP Bisa Ngerespon Sentuhan Jari Kita?</h2>
+          <p>Padahal kaca itu isolator. Rahasianya ada di lapisan transparan setipis mikro yang bisa mengalirkan listrik &mdash; dan di kemampuan layar membaca perubahan kapasitansi sekecil beberapa pikofarad.</p>
+          <div class="sp-meta">
+            <span>oleh <b>Muhammad Lutfi</b></span>
+            <span>5 menit baca</span>
+            <span>ada simulasi sentuh</span>
+          </div>
+        </div>
+      </a>
+
+      <div class="fact-grid reveal" style="margin-top:1.4rem">
+        <div class="fact"><b>5</b><span>artikel populer 600&ndash;900 kata</span></div>
+        <div class="fact"><b>5</b><span>simulasi interaktif di dalam artikel</span></div>
+        <div class="fact"><b>6</b><span>halaman fitur baru (Data Lab, glosarium, dan lainnya)</span></div>
+        <div class="fact"><b>100%</b><span>klaim penting bersumber</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FITUR ============ -->
+  <section class="bg-soft">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Jelajahi physiverse</p>
+          <h2>Enam ruang baru untuk bermain dengan fisika</h2>
+          <p>Bukan cuma membaca: ada data cuaca sungguhan yang bisa kamu olah, kamus istilah yang bisa dicari, penjelasan kilat, jejak sejarah, berita terbaru, dan kisah para peraih Nobel.</p>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <a class="feature-card reveal is-new" href="data-lab.html">
+          <span class="fc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 19V5"/><path d="M4 19h16"/><path d="M8 16v-5"/><path d="M12 16V8"/><path d="M16 16v-3"/><path d="M20 16V6"/>
+            </svg>
+          </span>
+          <h3>Physiverse Data Lab</h3>
+          <p>Dashboard interaktif dari data cuaca sungguhan: suhu, curah hujan, kelembapan, dan kecepatan angin. Bisa ganti kota dan mengunduh datanya.</p>
+          <span class="fc-tag">Data &amp; grafik &rarr;</span>
+        </a>
+
+        <a class="feature-card reveal is-new" href="glosarium.html">
+          <span class="fc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M19 18v3H6.5"/><path d="M9 8h6"/>
+            </svg>
+          </span>
+          <h3>Glosarium Fisika</h3>
+          <p>Kamus istilah fisika yang bisa dicari: entropi, resistansi, pembiasan, superkonduktivitas, neutrino. Ada definisi singkat dan contoh penerapannya.</p>
+          <span class="fc-tag">Cari istilah &rarr;</span>
+        </a>
+
+        <a class="feature-card reveal is-new" href="detik-60.html">
+          <span class="fc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="13" r="8"/><path d="M12 13V9"/><path d="M9 2h6"/><path d="M12 2v3"/>
+            </svg>
+          </span>
+          <h3>Fisika 60 Detik</h3>
+          <p>Satu konsep, satu ilustrasi, beberapa kalimat. "Apa itu efek Doppler?", "Mengapa logam menghantarkan listrik?" &mdash; selesai dalam satu menit.</p>
+          <span class="fc-tag">Baca cepat &rarr;</span>
+        </a>
+
+        <a class="feature-card reveal is-new" href="nobel.html">
+          <span class="fc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-2.5L17 22l-1.5-8"/>
+            </svg>
+          </span>
+          <h3>Nobel Fisika</h3>
+          <p>Dari Röntgen (1901) sampai pemenang terbaru, lengkap dengan kutipan resmi panitia Nobel dan penjelasan sederhananya.</p>
+          <span class="fc-tag">Lihat daftar &rarr;</span>
+        </a>
+
+        <a class="feature-card reveal is-new" href="science-history.html">
+          <span class="fc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M3 6h18"/><path d="M12 6v14"/><path d="M5 6c0 5 3 9 7 9s7-4 7-9"/><path d="M8 20h8"/>
+            </svg>
+          </span>
+          <h3>Science History</h3>
+          <p>Garis waktu penemuan besar, plus rubrik <b>Physicists Who Changed the World</b>: cerita bagaimana mereka mengubah cara kita memahami alam.</p>
+          <span class="fc-tag">Telusuri sejarah &rarr;</span>
+        </a>
+
+        <a class="feature-card reveal is-new" href="physics-news.html">
+          <span class="fc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 8h2.5A1.5 1.5 0 0 1 21 9.5V17a2 2 0 0 1-2 2h-2"/><path d="M7 9h7"/><path d="M7 12h7"/><path d="M7 15h4"/>
+            </svg>
+          </span>
+          <h3>Physics News</h3>
+          <p>Kabar fisika terkini dengan bahasa yang mudah: jam nuklir, pulsa sinar-X attodetik, kuark di plasma Big Bang, sampai penelitian neutrino.</p>
+          <span class="fc-tag">Baca berita &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ARTIKEL ============ -->
+  <section id="artikel">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Lima artikel utama</p>
+          <h2>Lima hal sehari-hari, lima penjelasan fisika</h2>
+          <p>Pilih kategori untuk menyaring. Setiap artikel 600&ndash;900 kata, ditulis satu anggota kelompok, dan ditutup daftar sumber yang bisa kamu cek.</p>
+        </div>
+        <div class="chip-row" role="group" aria-label="Saring artikel berdasarkan kategori">
+          <button class="chip is-on" data-filter="semua" aria-pressed="true">Semua</button>
+          <button class="chip" data-filter="gadget">Gadget &amp; Teknologi</button>
+          <button class="chip" data-filter="alam">Fenomena Alam</button>
+          <button class="chip" data-filter="dapur">Dapur &amp; Kalor</button>
+        </div>
+      </div>
+
+      <div class="card-grid">
+
+        <!-- 1. Touchscreen -->
+        <a class="card reveal" href="touchscreen.html" data-tags="gadget">
+          <div class="card-thumb">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <defs><linearGradient id="t1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#3a2d31"/><stop offset="1" stop-color="#554348"/></linearGradient></defs>
+              <rect width="320" height="180" fill="url(#t1)"/>
+              <g opacity=".55">
+                <circle cx="150" cy="96" r="26" fill="none" stroke="#D4F5F5" stroke-width="1.5"/>
+                <circle cx="150" cy="96" r="44" fill="none" stroke="#D4F5F5" stroke-width="1.2" opacity=".7"/>
+                <circle cx="150" cy="96" r="62" fill="none" stroke="#D4F5F5" stroke-width="1" opacity=".4"/>
+              </g>
+              <rect x="120" y="30" width="60" height="106" rx="10" fill="#93B7BE" opacity=".22" stroke="#93B7BE"/>
+              <g fill="#D4F5F5">
+                <circle cx="150" cy="96" r="4"/>
+                <circle cx="134" cy="84" r="2.2" opacity=".9"/><circle cx="166" cy="108" r="2.2" opacity=".9"/>
+                <circle cx="164" cy="82" r="2" opacity=".7"/><circle cx="136" cy="110" r="2" opacity=".7"/>
+              </g>
+              <path d="M226 60 q14 16 0 32" stroke="#D4F5F5" stroke-width="2" fill="none" opacity=".7"/>
+              <path d="M240 52 q22 24 0 48" stroke="#D4F5F5" stroke-width="2" fill="none" opacity=".4"/>
+            </svg>
+            <span class="badge">Gadget</span>
+          </div>
+          <div class="card-body">
+            <h3>Kenapa Layar HP Bisa Ngerespon Sentuhan Jari Kita?</h3>
+            <p>Padahal kaca itu isolator. Rahasianya ada di lapisan transparan setipis mikro yang bisa mengalirkan listrik.</p>
+            <div class="card-meta"><span>Muhammad Lutfi</span><span>5 menit baca</span></div>
+          </div>
+        </a>
+
+        <!-- 2. Pelangi -->
+        <a class="card reveal" href="pelangi.html" data-tags="alam">
+          <div class="card-thumb">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <rect width="320" height="180" fill="#2b2226"/>
+              <g fill="none" stroke-width="7">
+                <path d="M60 160 A100 100 0 0 1 260 160" stroke="#d9534a"/>
+                <path d="M67 160 A93 93 0 0 1 253 160" stroke="#e08a3c"/>
+                <path d="M74 160 A86 86 0 0 1 246 160" stroke="#e3cb52"/>
+                <path d="M81 160 A79 79 0 0 1 239 160" stroke="#63a45f"/>
+                <path d="M88 160 A72 72 0 0 1 232 160" stroke="#4a86c5"/>
+                <path d="M95 160 A65 65 0 0 1 225 160" stroke="#4a4d9e"/>
+                <path d="M102 160 A58 58 0 0 1 218 160" stroke="#7d4a9e"/>
+              </g>
+              <g fill="#D4F5F5" opacity=".55">
+                <circle cx="42" cy="52" r="2"/><circle cx="70" cy="34" r="1.6"/><circle cx="250" cy="44" r="2"/>
+                <circle cx="286" cy="72" r="1.6"/><circle cx="200" cy="30" r="1.5"/><circle cx="120" cy="40" r="1.4"/>
+              </g>
+              <rect y="160" width="320" height="20" fill="#3a2d31"/>
+            </svg>
+            <span class="badge">Fenomena Alam</span>
+          </div>
+          <div class="card-body">
+            <h3>Kenapa Pelangi Melengkung dan Warnanya Selalu Mejikuhibiniu?</h3>
+            <p>Tetesan air hujan bekerja seperti prisma raksasa. Dan bentuk melengkung itu sebenarnya… lingkaran.</p>
+            <div class="card-meta"><span>Rianti Fauziah</span><span>4 menit baca</span></div>
+          </div>
+        </a>
+
+        <!-- 3. ANC -->
+        <a class="card reveal" href="anc.html" data-tags="gadget">
+          <div class="card-thumb">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <rect width="320" height="180" fill="#2f262a"/>
+              <path d="M0 58 q20 -22 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#93B7BE" stroke-width="2.4"/>
+              <path d="M0 90 q20 22 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="#D4F5F5" stroke-width="2.4" stroke-dasharray="6 5"/>
+              <path d="M0 126 L320 126" stroke="#ffffff" stroke-width="3"/>
+              <g fill="#D4F5F5" opacity=".8">
+                <rect x="118" y="140" width="84" height="10" rx="5"/>
+                <rect x="126" y="150" width="68" height="14" rx="7" fill="#93B7BE" opacity=".6"/>
+              </g>
+            </svg>
+            <span class="badge">Gadget</span>
+          </div>
+          <div class="card-body">
+            <h3>Headphone Anti-Bising: Gimana Suara "Lawan" Suara Bikin Hening?</h3>
+            <p>Ketika puncak gelombang bertemu lembah gelombang, keduanya saling menghancurkan. Itulah ANC.</p>
+            <div class="card-meta"><span>Alifah Salwa Susanto</span><span>4 menit baca</span></div>
+          </div>
+        </a>
+
+        <!-- 4. Asap kopi -->
+        <a class="card reveal" href="asap-kopi.html" data-tags="dapur alam">
+          <div class="card-thumb">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <rect width="320" height="180" fill="#2c2327"/>
+              <g stroke="#D4F5F5" fill="none" stroke-width="2" opacity=".6">
+                <path d="M150 120 C 140 96, 164 84, 152 58 C 144 40, 158 32, 152 16"/>
+                <path d="M176 122 C 186 100, 164 88, 176 64 C 184 48, 172 40, 178 26" opacity=".5"/>
+              </g>
+              <path d="M116 122 h88 l-10 44 h-68 z" fill="#e9eef0"/>
+              <ellipse cx="160" cy="122" rx="44" ry="8" fill="#4a3226"/>
+              <g fill="#ffffff" opacity=".5">
+                <circle cx="140" cy="70" r="9"/><circle cx="170" cy="52" r="7"/><circle cx="158" cy="34" r="5"/>
+              </g>
+            </svg>
+            <span class="badge">Dapur &amp; Kalor</span>
+          </div>
+          <div class="card-body">
+            <h3>Mengapa Minuman Panas Mengeluarkan "Asap" Putih?</h3>
+            <p>Uap air murni tidak kelihatan. Yang kamu lihat melayang itu justru titik-titik air cair — awan mini di atas cangkirmu.</p>
+            <div class="card-meta"><span>Dyah Dajinta Najla Gutomo</span><span>5 menit baca</span></div>
+          </div>
+        </a>
+
+        <!-- 5. Air fryer -->
+        <a class="card reveal" href="air-fryer.html" data-tags="dapur">
+          <div class="card-thumb">
+            <svg viewBox="0 0 320 180" aria-hidden="true">
+              <rect width="320" height="180" fill="#3a2d31"/>
+              <path d="M96 34 h128 v16 h-128 z" fill="#554348" stroke="#8C9A9E"/>
+              <path d="M100 52 q60 14 120 0" stroke="#ff8a5c" stroke-width="4" fill="none"/>
+              <g stroke="#D4F5F5" fill="none" stroke-width="2" opacity=".8">
+                <path d="M120 62 L112 92"/><path d="M160 62 L160 92"/><path d="M200 62 L208 92"/>
+                <path d="M112 96 Q160 126 208 96" opacity=".6"/>
+              </g>
+              <rect x="96" y="104" width="128" height="52" rx="8" fill="#554348" stroke="#8C9A9E"/>
+              <rect x="104" y="112" width="112" height="36" rx="5" fill="#2a2124"/>
+              <g fill="#e0c48f">
+                <rect x="114" y="124" width="12" height="24" rx="3"/>
+                <rect x="132" y="120" width="12" height="28" rx="3"/>
+                <rect x="150" y="124" width="12" height="24" rx="3"/>
+                <rect x="168" y="120" width="12" height="28" rx="3"/>
+                <rect x="186" y="124" width="12" height="24" rx="3"/>
+              </g>
+            </svg>
+            <span class="badge">Dapur &amp; Kalor</span>
+          </div>
+          <div class="card-body">
+            <h3>Goreng Renyah Tanpa Minyak: Kok Bisa Air Fryer Masak Pakai Udara?</h3>
+            <p>Bukan menggoreng, tapi konveksi paksa super kencang yang memicu reaksi Maillard di permukaan makanan.</p>
+            <div class="card-meta"><span>Samqifah Muti Alisia</span><span>5 menit baca</span></div>
+          </div>
+        </a>
+
+      </div>
+      <p class="muted center" style="margin-top:1.5rem">Menampilkan <b id="filter-count">5</b> artikel. Setiap artikel 600&ndash;900 kata dengan daftar sumber di bagian akhir.</p>
+    </div>
+  </section>
+
+  <!-- ============ SEJARAH & BERITA ============ -->
+  <section class="bg-soft">
+    <div class="wrap split-2">
+      <div class="reveal">
+        <p class="eyebrow">Science History</p>
+        <h2>Bagaimana fisika sampai ke bentuknya hari ini</h2>
+        <p class="home-lead">Sains tidak lahir sekaligus. Ia tumbuh dari orang-orang yang berani mempertanyakan hal yang dianggap sudah jelas.</p>
+
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-year">1831</div>
+            <h3>Faraday menemukan induksi elektromagnetik</h3>
+            <p>Gerakan magnet di dekat kawat menimbulkan arus listrik. Dari satu percobaan meja ini lahir generator dan seluruh jaringan listrik modern.</p>
+            <div class="tl-who">Michael Faraday (1791&ndash;1867)</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">1905</div>
+            <h3>Einstein menerbitkan empat makalah dalam satu tahun</h3>
+            <p>Efek fotolistrik, gerak Brown, relativitas khusus, dan kesetaraan massa&ndash;energi. Tiga di antaranya mengubah arah fisika abad ke-20.</p>
+            <div class="tl-who">Albert Einstein (1879&ndash;1955)</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-year">2015</div>
+            <h3>Gelombang gravitasi terdengar pertama kali</h3>
+            <p>Dua lubang hitam bergabung 1,3 miliar tahun cahaya dari Bumi dan menggetarkan ruang-waktu. Detektor LIGO menangkapnya pada 14 September 2015.</p>
+            <div class="tl-who">Kolaborasi LIGO &mdash; Nobel Fisika 2017</div>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="science-history.html">Buka Science History lengkap</a>
+      </div>
+
+      <div class="reveal">
+        <p class="eyebrow">Physics News</p>
+        <h2>Yang sedang terjadi di fisika</h2>
+        <p class="home-lead">Ringkasan kabar terbaru, selalu disertai tautan ke sumber aslinya.</p>
+        <div class="news-list" style="margin-top:1rem">
+          <a class="news-item" href="physics-news.html#nobel-2026">
+            <span class="ni-date"><b>6 Okt 2026</b>IceCube</span>
+            <span>
+              <h3>Francis Halzen memenangi Nobel Fisika 2026</h3>
+              <p>Dianugerahi untuk peran menentukan pada Observatorium Neutrino IceCube dan penemuan neutrino energi tinggi dari luar angkasa.</p>
+            </span>
+          </a>
+          <a class="news-item" href="physics-news.html#jam-nuklir">
+            <span class="ni-date"><b>10 Okt 2026</b>TU Wien</span>
+            <span>
+              <h3>Jam nuklir pertama yang bisa menstabilkan diri</h3>
+              <p>Memakai transisi inti thorium-229, jam ini stabil lebih dari 24 jam dengan ketelitian sekitar satu detik per 30 juta tahun.</p>
+            </span>
+          </a>
+          <a class="news-item" href="physics-news.html#sinar-x">
+            <span class="ni-date"><b>16 Okt 2026</b>European XFEL</span>
+            <span>
+              <h3>Rekor intensitas pulsa sinar-X attodetik</h3>
+              <p>Pulsa 300 attodetik difokuskan ke titik 180 &times; 330 nanometer dengan intensitas puncak di atas 10<sup>20</sup> W/cm<sup>2</sup>.</p>
+            </span>
+          </a>
+        </div>
+        <a class="btn btn-ghost" href="physics-news.html" style="margin-top:1.1rem">Semua berita fisika</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEMA ============ -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Tema &amp; sasaran pembaca</p>
+          <h2>Fisika di Sekitar Kita, untuk pembaca awam</h2>
+        </div>
+      </div>
+      <div class="card-grid">
+        <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:1.4rem">
+          <span class="badge badge-plum">Siapa pembacanya</span>
+          <h3 style="margin-top:.8rem">Pelajar SMA &amp; masyarakat umum</h3>
+          <p class="muted" style="margin:0">Kami menulis untuk orang yang penasaran tapi bukan ahli: siswa SMA, mahasiswa non-fisika, dan siapa pun yang pernah bertanya "kok bisa?" saat memakai benda sehari-hari. Istilah teknis selalu diperkenalkan dengan analogi dan contoh.</p>
+        </div>
+        <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:1.4rem">
+          <span class="badge badge-plum">Sudut pandang</span>
+          <h3 style="margin-top:.8rem">Benda yang kamu sentuh setiap hari</h3>
+          <p class="muted" style="margin:0">Kami menghindari contoh laboratorium. Topik diambil dari benda di kantong, meja makan, langit di atas rumahmu, dan data cuaca kota sendiri &mdash; supaya fisika terasa dekat, bukan seperti hafalan rumus.</p>
+        </div>
+        <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:1.4rem">
+          <span class="badge badge-plum">Cara kami menjaga akurasi</span>
+          <h3 style="margin-top:.8rem">Setiap angka punya sumber</h3>
+          <p class="muted" style="margin:0">Setiap klaim penting dirujuk ke buku teks, artikel jurnal, atau lembaga resmi (NASA, NOAA, BMKG, Open-Meteo, dan lain-lain). Daftar lengkapnya ada di <a href="sumber.html">halaman Sumber</a>, termasuk catatan bagaimana kami memakai bantuan AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section>
+    <div class="wrap reveal" style="background:linear-gradient(150deg,var(--plum-900),var(--plum-700));color:#fff;border-radius:var(--r-lg);padding:clamp(1.8rem,4vw,3rem);display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2rem;align-items:center">
+      <div>
+        <h2 style="color:#fff">Tentang kami &amp; cara kami bekerja</h2>
+        <p style="color:#e3dadd;margin-bottom:1.2rem">Lima mahasiswa, lima peran, satu website. Baca profil kelompok, pembagian tugas, pernyataan penggunaan AI, dan metode verifikasi fakta kami.</p>
+        <a class="btn btn-accent" href="tentang.html">Buka halaman Tentang Kami</a>
+      </div>
+      <div style="display:grid;gap:.6rem">
+        <a class="btn btn-ghost" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);color:#fff;justify-content:flex-start" href="sumber.html">Sumber &amp; referensi lengkap</a>
+        <a class="btn btn-ghost" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.3);color:#fff;justify-content:flex-start" href="log-ai.html">Log penggunaan AI</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#3a2d31"/>
+            <circle cx="20" cy="20" r="5" fill="#D4F5F5"/>
+            <ellipse cx="20" cy="20" rx="17" ry="7" fill="none" stroke="#93B7BE" stroke-width="1.6"/>
+            <ellipse cx="20" cy="20" rx="7" ry="17" fill="none" stroke="#93B7BE" stroke-width="1.6" opacity=".75"/>
+          </svg>
+          <span class="brand-name">physi<em>verse</em></span>
+        </div>
+        <p style="font-size:.9rem;max-width:44ch">Sains populer tentang fisika di sekitar kita. Understanding the Science Behind Everyday Life.</p>
+        <p class="footer-fine">Ilustrasi, animasi, dan video: karya kelompok physiverse (SVG serta animasi yang dirender sendiri). Tidak memakai gambar berhak cipta pihak ketiga.</p>
+        <p class="footer-fine"><b>Domain publik.</b> Seluruh karya kami di situs ini &mdash; teks, kode, ilustrasi, animasi, dan video &mdash; dilepas ke domain publik di bawah <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license noopener" target="_blank">CC0 1.0 Universal</a>. Materi pihak ketiga (kutipan dan tautan sumber) tetap milik pemiliknya masing-masing.</p>
+      </div>
+      <div>
+        <h3>Jelajah</h3>
+        <ul class="footer-list">
+          <li><a href="science-history.html">Science History</a></li>
+          <li><a href="physics-news.html">Physics News</a></li>
+          <li><a href="data-lab.html">Physiverse Data Lab</a></li>
+          <li><a href="glosarium.html">Glosarium Fisika</a></li>
+          <li><a href="detik-60.html">Fisika 60 Detik</a></li>
+          <li><a href="nobel.html">Nobel Fisika</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Artikel</h3>
+        <ul class="footer-list">
+          <li><a href="touchscreen.html">Layar HP &amp; sentuhan jari</a></li>
+          <li><a href="pelangi.html">Pelangi mejikuhibiniu</a></li>
+          <li><a href="anc.html">Headphone ANC</a></li>
+          <li><a href="asap-kopi.html">"Asap" minuman panas</a></li>
+          <li><a href="air-fryer.html">Air fryer tanpa minyak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kelompok</h3>
+        <ul class="footer-list">
+          <li><a href="tentang.html">Tentang Kami</a></li>
+          <li><a href="sumber.html">Sumber &amp; Referensi</a></li>
+          <li><a href="log-ai.html">Log Penggunaan AI</a></li>
+          <li><a href="index.html#artikel">Daftar artikel</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Domain publik (CC0 1.0) &mdash; Kelompok physiverse, Universitas Negeri Jakarta. Tugas UTS Data Raya dan Pemrograman.</span>
+      <span>Dibangun dengan HTML, CSS, dan JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<dialog class="film" aria-label="Film pendek animasi physiverse">
+  <div class="film-bar">
+    <span><b>physiverse</b> &mdash; gelombang &amp; cahaya (12 detik, tanpa suara)</span>
+    <button class="film-close" type="button">Tutup</button>
+  </div>
+  <video controls loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+    <source src="assets/hero-physiverse.mp4" type="video/mp4">
+    Perambanmu tidak mendukung pemutar video HTML5.
+  </video>
+</dialog>
+
+<button class="to-top" type="button" aria-label="Kembali ke atas">&uarr;</button>
+<script src="js/main.js"></script>
+</body>
+</html>
